@@ -1,0 +1,22 @@
+.box{
+    width: 200px;
+    height:200;
+    background-color: lightblue;
+}
+.box2 {
+    margin: 30px;
+    margin: 10px 30px;
+    margin: 10px 30px 20px 40px;
+    margin: auto;   /* centers horizontally */
+    height: 100px;
+}
+
+body {
+    background-color: brown;
+}
+.border {
+    border: 20px solid black;
+    border-right: 10px solid blue;
+    border-bottom: 9px solid green;
+    border-radius: 20px;
+}

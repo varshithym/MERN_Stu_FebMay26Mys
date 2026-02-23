@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-fr{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            border: 2px solid black;
+            gap: 10px;
+            justify-content: center;
+            text-align: center;
+            margin: 10px;
+
+        }
+
+        
+        .item {
+            border: 1px solid black ;
+            color: blue;
+            padding: 20px;
+            justify-content: center;
+            text-align: center;
+            border: black;
+            background-color: aqua;
+        }
+        
+    </style>
+</head>
+<body>
+   
+
+    <!-- fixed with column using fractionl columns -->
+     <div class="grid-fr">
+         <div class="item">1fr</div>
+        <div class="item">2fr</div>
+        <div class="item">1frpx</div>
+
+     </div>
+
+    
+</body>
+</html>

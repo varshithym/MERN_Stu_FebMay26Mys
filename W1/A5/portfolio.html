@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <style>
+        .logo{
+            text-align: center;
+            justify-content: center;
+            color: red;
+            background-color: yellow;
+            
+        }
+        .nav-links {
+            display: flex;
+            background-color: yellow;
+            justify-content: space-evenly;
+        }
+        body{
+            background-color: purple;
+            color: pink;
+            
+        }
+        .hero {
+            color: aqua;
+            justify-content: center;text-align: center;
+        }
+        .class{
+            background-color: aquamarine;
+        }
+        #about {
+            background-color: aqua;
+        }
+        #skills{
+            background-color: brown;
+        }
+        .form-group{
+            justify-content: center;
+            text-align: center;
+        }
+        #what {
+            justify-content: center;
+            text-align: center;
+
+        }
+        .submit-btn{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-left: 700px;
+            
+            
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../A5/portfolio.html" class="logo">varshith</a>
+            <ul class="nav-links">
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="hero">
+        <h1>varshith y m</h1>
+        <img src="myphoto.jpg.jpeg" alt="my photo" class="profile-img " height="200px" width="200">
+        <p>i am a student</p>
+        <a href="#contact" class="cta-button">contact me</a>
+
+    </section>
+    <!-- about section -->
+     <section id="about">
+        <h2>about me</h2>
+        <article class="about">
+            <h3>full stack developer</h3>
+            <p>experience in web dev hosting.
+                specialized in finance projects
+            </p>
+            <div class="tags">
+                <span class="tag">backend : NodeJs</span>
+                <span class="tag"> DB : MongoDB</span>
+
+            </div>
+
+        </article>
+     </section>
+     <section id="skills">
+        <h3>my skills</h3>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>MERN stack</h4>
+                <p>ReactJS,NodeJs,ExpressJS,MongoDB</p>
+            </div>
+
+        </div>
+
+     </section>
+     <!-- projects -->
+      <section id="projects">
+        <h3>my projects</h3>
+        <div class="projects-container">
+            <div class="project-content"></div>
+            <h4>gola</h4>
+            <p>rapid way to book a cab</p>
+            <a href="https://wikipedia.org" target="_blank">view</a>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>project</th>
+                    <th colspan="2">Technology</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AWS for hosting</td>
+                    <td>MERN</td>
+                    <td>Redis</td>
+                </tr>
+            </tbody>
+        </table>
+      </section>
+      <!-- contact me -->
+      <section id="contact">
+        <h3>contact me</h3>
+        <form class="contact-form">
+        <fieldset>
+            <legend id="what">contact form</legend>
+            <div class="form-group">
+                <label for="name">name</label>
+                <input type="text" name="name" id="name" placeholder="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">name</label>
+                <input type="text" name="email" id="name" placeholder="email" required>
+            </div>
+            <div class="form-group">
+                <select name="type"> 
+                    <option value="fte">fte</option>
+                    <option value="consultant">consultant</option>
+                </select>
+            </div>
+        </fieldset>
+        <BUTTon type="submit" class="submit-btn">send</BUTTon>
+        </form>
+       
+       
+        
+      </section>
+    
+</body>
+</html>

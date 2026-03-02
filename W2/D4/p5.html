@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <main class="max-w-4xl mx-auto p-6 space-y-8">
+        <section class="border rounded p-6 space-y-6">
+            <div class="flex justify-between items-center">
+                <button id="prev" class="px-3 py-2 rounded border hover:bg-blue-100 transition">prev</button>
+                <button id="prev" class="px-3 py-2 rounded border hover:bg-blue-100 transition">prev</button>
+            </div>
+        </section>
+        <!-- <section class="border rounded space-y-6">
+            <div class="overflow-hidden rounded border p-6">
+                <div  class="flex overflow-x-auto snap-x snap-madatory scroll-smooth">
+                    <div class="w-full shrink-0 h-52 snap-start flex items-center justify-center bg-red-100 font-bold">
+                        slide1
+                    </div>
+                    <div class="w-full shrink-0 h-52 snap-start flex items-center justify-center bg-red-100 font-bold">
+                        slide2
+                    </div>
+                    <div class="w-full shrink-0 h-52 snap-start flex items-center justify-center bg-red-100 font-bold">
+                        slide3
+                    </div>
+                    
+                </div>
+                <div class="flex justify-center gap-2 items-center">
+                <button id="prev" class="px-3 py-2 rounded border hover:bg-blue-100 transition">prev</button>
+                <button id="prev" class="px-3 py-2 rounded border hover:bg-blue-100 transition">next</button>
+            </div>
+            </div>
+            
+        </section> -->
+
+        <section class="border rounded space-y-6">
+            <div class="overflow-hidden rounded border p-6">
+                <div id="track" class="flex transition-transform duration-300 ease-out">
+                    <div class="w-full shrink-0 h-52 snap-start flex items-center justify-center bg-red-100 font-bold">
+                        slide1
+                    </div>
+                    <div class="w-full shrink-0 h-52 snap-start flex items-center justify-center bg-red-100 font-bold">
+                        slide2
+                    </div>
+                    <div class="w-full shrink-0 h-52 snap-start flex items-center justify-center bg-red-100 font-bold">
+                        slide3
+                    </div>
+                    
+                </div>
+                <div class="flex justify-center gap-2 items-center">
+                <button id="prev" class="px-3 py-2 rounded border hover:bg-blue-100 transition">prev</button>
+                <button id="next" class="px-3 py-2 rounded border hover:bg-blue-100 transition">next</button>
+            </div>
+            </div>
+            
+        </section>
+    </main>
+    <script>
+        const track = document.getElementById('track');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let index = 0;
+        const total = 3;
+        function update() {
+            track.style.transform = `translateX(-${index*100}%)`;
+        }
+        prevBtn.addEventListener('click',()=>{
+            index = (index + 1 + total)%total; update();
+        });
+        update();
+    </script>
+    
+</body>
+</html>

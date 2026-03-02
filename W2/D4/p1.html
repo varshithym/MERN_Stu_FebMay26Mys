@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- Model overlay positioning (fixed + inset-0) -->
+    <main class="max-w-4xl mx-auto p-6 space-y-8">
+        <section class="border rounded p-6 space-y-4">
+            <h2>Model Demo</h2>
+
+            <div class="overflow-auto h-72 border rounded p-4">
+                <div class="space-y-3">
+                    <p>content behind a model</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In illo culpa cupiditate. Reprehenderit cumque, facere soluta vel, delectus exercitationem eaque explicabo error est dolores adipisci aliquam a amet autem veritatis?
+                    Laborum, ipsa? Asperiores inventore accusamus sit veritatis ipsa, mollitia ad aliquid totam est. Fugit amet magni repellendus? Rerum reprehenderit tempore numquam odit sequi? Possimus ad nemo natus nihil tempora! Odio.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum cupiditate aspernatur fugiat commodi, accusantium porro consequuntur beatae minus! Quae ea quibusdam facere consectetur aut eligendi soluta! Magni, ab suscipit.
+                    Consequuntur illum placeat voluptate omnis voluptates ipsum et ullam ratione quisquam tempora rerum voluptatibus, accusantium pariatur unde possimus, harum quod perspiciatis adipisci! Optio, dolorem. Sit soluta est commodi qui nobis?</p>
+                </div>
+            </div>
+
+            <div class="fixed inset-0 border-dashed pointer-events-none">
+                <div class="absolute top-4 left-4 border rounded px-3 py-2 ">
+                    Overlay:fixed inset-0
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .second {
+            margin: auto;
+            border: 4px solid black;
+            height: 50px;
+            width: 500px;
+            background-color: rgb(212, 140, 7);
+          
+        }
+        .third {
+            margin: auto;
+            border: 4px solid black;
+            height: 400px;
+            width: 350px;
+            background-color: rgb(54, 136, 54);
+            position: relative;
+            border-top: 0;
+
+           
+            
+        }
+        .fourth{
+            bottom: 0;
+            
+            left: 50%;
+            border: 2px solid black;
+            height: 150px;
+            width: 90px;
+            position: absolute;
+            transform: translateX(-50%);
+            background-color: blue;
+            transform-origin: left;
+            transition: transform 1s ease;
+        }
+        .fifth {
+            top: 90px;
+            left: 50px;
+            border: 2px solid black;
+            height: 125px;
+            width: 70px;
+            position: absolute;
+            transform: translateX(-25%);
+            background-color: rgb(215, 215, 25);
+        }
+        .sixth {
+            height: 60px;
+            width: 35px;
+            border: 2px solid black;
+            top: 165px;
+            right: 30px;
+            position: absolute;
+            background-color: rgb(237, 6, 237);
+        }
+        .head {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+        }
+        .fourth:hover{
+            transform: translate(-50%)rotateY(-80deg);
+        }
+        .ball {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            background-color: aqua;
+            margin: top;
+            margin: auto;
+        
+            animation:all 1s infinite ease-in-out;
+            border-radius: 50%;
+            
+        }
+        @keyframes all{
+            0%{
+                top: 0%;
+            }
+            50% {
+                top: 70px;
+            }
+            100%{
+                top: 0;
+            }
+        }
+
+        .btn {
+            background-color: yellow;
+            color: black;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            height: 70px;
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="head">WELCOME TO YOUR HOME</h1>
+    <div class="main">
+        <div class="second"></div>
+
+        <div class="third">
+            <div class="fourth"></div>
+            <div class="fifth"></div>
+             <div class="sixth">
+            
+        </div>
+        </div>
+       
+    </div>
+    <div class="ball"></div>
+
+<div class="btn"> <button>click to see your home</button></div>
+</body>
+</html>

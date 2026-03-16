@@ -1,6 +1,6 @@
 cat <<'REPL_GUIDE'
-hi i am fine
+hi i am fine gm
 thank you 
 this is printed by cat
-REPL_GUIDE
+REPL_GUIDE 
 

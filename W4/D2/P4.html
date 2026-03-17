@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Form Validation</title>
+</head>
+<body>
+    <form id="studentform">
+        <label>Name:<input type="text" id="nameinput" name="name"></label><br><br>
+        <label>Email:<input type="email" id="emailinput" name="email"></label><br><br>
+        <lable>Gender:
+            <label><input type="radio" name="gender" value="Male">Male</label>
+            <label><input type="radio" name="gender" value="Female">Female</lab>
+        </lable><br><br>
+        <label>country:
+            <select id="country">
+                <option value="">Select</option>
+                <option value="India">India</option>
+                <option value="US">US</option>
+                <option value="China">China</option>
+                <option value="UK">UK</option>
+                <option value="Japan">japan</option>
+            </select>
+        </label><br><br>
+        <label><input type="checkbox" id="terms">Accept Terms</label><br><br>
+        
+        <button type="button" id="inspectbtn">Inspect Form values</button>
+    </form>
+<script src="./P4.js"></script>
+</body>
+</html>

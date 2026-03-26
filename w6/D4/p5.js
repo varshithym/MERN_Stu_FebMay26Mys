@@ -21,5 +21,5 @@ const server = http.createServer(function (req, res) {
 });
 
 server.listen(3006,function(){
-    console.log("server is running at http://localhost:3006");   
+    console.log("server is running in http://localhost:3006");   
 });

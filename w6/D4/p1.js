@@ -3,4 +3,4 @@
 const http = require("http");
 console.log("type of http.createServer",typeof http.createServer);
 
-console.log("common HTTP methods",http.METHODS);
+console.log("common HTTP method",http.METHODS);

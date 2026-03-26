@@ -10,7 +10,7 @@ const server = http.createServer(function(req,res) {
     }
     if(req.method === "GET" && req.url === "/about") {
         res.writeHead(200,{"Content-type":"text/plain"});
-        res.end("About Route. Welcome to About Us Page.");
+        res.end("About Root. Welcome to About Us Page.");
         return;
     }
     if(req.method === "GET" && req.url === "/products") {

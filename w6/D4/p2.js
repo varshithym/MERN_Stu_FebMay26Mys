@@ -9,7 +9,7 @@ const http = require("http");
 
 const server = http.createServer(function(req,res){
     // writeHead() sets the response status code and headers
-    res.writeHead(200,{"content-type":"text/plain"});
+    res.writeHead(200,{"content-type":"texts/plain"});
     //end() sends the response body closes the response
     res.end("Hello from NodeJS HTTP Server.");
 });

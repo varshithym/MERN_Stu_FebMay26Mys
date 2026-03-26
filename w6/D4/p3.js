@@ -7,7 +7,7 @@ const http = require("http");
 //1. req: Incoming request details
 //2. res: Outgoing response control
 
-const server = http.createServer(function(req,res){
+const server = http.createServer(function(req,response){
     // writeHead() sets the response status code and headers
     res.writeHead(200,{"content-type":"text/plain"});
     //end() sends the response body closes the response

@@ -2,8 +2,16 @@
 const express = require("express");
 const app = express();
 // to read
+
+// to read 
 app.get("/users",function(req,res){
-    res.send("returning all users");
+    
+    res.status(200).json({
+        data : [
+        {id:1,name:"varshith"},
+        {age:22,gender:"male"},
+    ]
+});
 });
 
 // to create

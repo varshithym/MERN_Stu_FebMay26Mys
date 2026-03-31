@@ -12,6 +12,6 @@ app.get("/",function(req,res){
     res.send("hello from express server");
 });
 // listen() starts the sever in chosen port number
-app.listen(4000,function(){
-    console.log("express serer running at http://localhost:4000");
-})
+app.listen(4009,function(){
+    console.log("Express Server is running at http://localhost:4009");
+});

@@ -15,6 +15,7 @@ console.log("header section :",tokenParts[0]);
 console.log("payload section :",tokenParts[1]);
 console.log("signature :",tokenParts[2]);
 console.log("JWT part count:",tokenParts.length);
+// const newSecretKey = "Varshith1980";
 
 try{
     const VewrifyPayload = jwt.verify(token,secretKey);

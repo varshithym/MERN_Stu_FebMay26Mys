@@ -14,12 +14,12 @@ app.get("/products",function(req,res,next){
     next(new AppError("product not found"),404);
 });
 app.get("/search",function(req,res,next){
-    if(!req.querry.q){
+    if(!req.query.q){
         return next(new AppError("search querry is required"),400)
     }
     res.json({
         sucess:true,
-        query:req.querry.q
+        query:req.query.q
     });
 });
 app.use(function(error,req,res,next){

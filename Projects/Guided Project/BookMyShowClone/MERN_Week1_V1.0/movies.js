@@ -35,4 +35,4 @@ const movies = [
 ];
 
 // export the movie data to other files
-module.export = movies;
+module.exports = movies;

@@ -9,7 +9,7 @@ function validateMovieSelection(movies,movieId,callback){
     callback(null,selectedMovie);
 }
 function validatTimeSelection(movie,selectedTime,Callback){
-    const selectedShowTime = movie.showtimes.find((show)=>show.time.toLowerCase()===selectedTime.toLowerCase);
+    const selectedShowTime = movie.showtimes.find((show)=>show.time.toLowerCase()===selectedTime.toLowerCase());
     if(!selectedShowTime){
         return Callback("Invalid time slot selection. Choose a valid show time.",null);
     }

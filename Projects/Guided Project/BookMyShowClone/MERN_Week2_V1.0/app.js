@@ -1,34 +1,31 @@
-
 // Express app configuration file
 const express = require("express");
-const cookiePsarser = require("cookie-parser");
+const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 const loggerMiddleware = require("./middleware/loggerMiddleware");
 const errorMiddleware = require("./middleware/errorMiddleware");
- 
 
 const movieRoutes = require("./routes/movieRoutes");
 const authRoutes = require("./routes/authRoutes");
 const bookingRoutes = require("./routes/bookingRoutes");
 const userRoutes = require("./routes/userRoutes");
-const e = require("express");
-const cookieParser = require("cookie-parser");
 
 const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
 
-app.use(session({
-    secret:"secretkeydonntellanyone",
-    resave:false,
-    saveUninitialized:false,
-    cookie:{
-        secure:false,
-        httpOnly:true
-    }
-})
+app.use(
+    session({
+        secret:"secretKeyshhhdonttellanyone",
+        resave:false,
+        saveUninitialized:false,
+        cookie:{
+            secure:false,
+            httpOnly:true
+        }
+    })
 );
 
 app.use(loggerMiddleware);
@@ -38,4 +35,4 @@ app.use("/",bookingRoutes);
 app.use("/users",userRoutes);
 
 app.use(errorMiddleware);
-module.exports=app;
+module.exports = app;

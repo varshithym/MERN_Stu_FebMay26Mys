@@ -1,45 +1,53 @@
-// user login profile fetch and logout user functionality created
+// User Login, profile fetch and logout of user functionality created
 const jwt = require("jsonwebtoken");
-const users = require(data / users)
+const users = require("../data/users");
+
 const CustomError = require("../utils/CustomError");
-const { JWT_SECRET } = require("../middleware/authMiddleware");
-function loginUser(req, res, next) {
-    try {
-        const { email, password } = req.body;
+
+const {JWT_SECRET} = require("../middleware/authMiddleware");
+
+function loginUser(req,res,next){
+    try{
+        const {email,password} = req.body;
+
         if (!email || !password) {
-            return next(new CustomError("email/password are required", 400));
+            return next(new CustomError("email/password are required.",400));
         }
-        const user = users.find((u) => u.email === email && u.password === password);
-        if (!user) {
-            return next(new CustomError("invalid email/password", 400));
+        const user = users.find((u)=>u.email === email && u.password === password);
+
+        if(!user){
+           return next(new CustomError("Invalid email/password",401));
         }
+
         const token = jwt.sign({
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            role: user.role
-        }, JWT_SECRET, { expiresIn: "30m" });
-        Response.cookie("token", token, {
-            httpOnly: true,
-            secure: false,
-            maxAge: 60 * 60 * 1000
+            id:user.id,
+            name:user.name,
+            email:user.email,
+            role:user.role
+        },JWT_SECRET,{expiresIn:"30m"});
+
+        res.cookie("token",token,{
+            httpOnly:true,
+            secure:false,
+            maxAge:60*60*1000
         });
 
         req.session.user = {
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            role: user.role
+            id:user.id,
+            name:user.name,
+            email:user.email,
+            role:user.role
         };
+
         res.status(200).json({
-            success: true,
-            message: "log in sucessful",
+            success:true,
+            message:"Login Successful",
             token,
-            user: {
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                role: user.role
+            user:{
+                id:user.id,
+                name:user.name,
+                email:user.email,
+                role:user.role
             }
         });
     }
@@ -47,13 +55,14 @@ function loginUser(req, res, next) {
         next(error);
     }
 }
+
 function logoutUser(req,res,next){
     try{
         req.session.destroy(()=>{
             res.clearCookie("token");
             res.status(200).json({
-                success: true,
-                message: "log in sucessful"
+                success:true,
+                message:"Logout Successful"
             });
         });
     }
@@ -61,23 +70,23 @@ function logoutUser(req,res,next){
         next(error);
     }
 }
+
 function getProfile(req,res,next){
     try{
         res.status(200).json({
-            success: true,
-            message: "profile fetched sucessful",
-            user: req.user,
-            sessionUser:req.session.user || null
+            success:true,
+            message:"Profile fetched Successfully",
+            user:req.user,
+            sessionUser: req.session.user || null
         });
-
     }
     catch(error){
         next(error);
     }
-    
 }
+
 module.exports = {
     loginUser,
     logoutUser,
     getProfile
-}
+};

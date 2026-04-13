@@ -7,7 +7,7 @@ const JWT_SECRET = "TumbaSecret";
 function authMiddleware(req,res,next) {
     try{
         const authHeader = req.headers.authorization;
-        const tokenFromHeader = authHeader && authHeader.startsWith("Bearer")?authHeader.split(" ")[1]:null;
+        const tokenFromHeader = authHeader && authHeader.startsWith("Bearer") ? authHeader.split(" ")[1]:null;
 
         const token = tokenFromHeader || req.cookies.token;
 

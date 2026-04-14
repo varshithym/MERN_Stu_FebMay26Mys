@@ -21,7 +21,7 @@ async function sortPaginationDemo(){
 
         //Pagination
         const page = 2;
-        const limitCount = 2;
+        const limitCount = 2;``
         const skipCount = (page-1)*limitCount;
 
         const paginatedResults = await Product.find({category: "Stationary"}).sort({createdOrder:1})

@@ -1,5 +1,7 @@
 const readline = require("readline");
 const chalk = require("chalk");
+const user = require("./user");
+const profile = require("./profile");
 
 
 const rl = readline.createInterface({
@@ -28,62 +30,60 @@ function showMenu (){
 }
 function handleChoice(choice){
     switch(choice){
-        case"1":
-        console.log(chalk.green("crate profile created"));
-        break;
 
-        case"2":
-        console.log(chalk.green("view my profile selected"));
-        break;
+        case "1":
+            user.Createprofile(rl, showMenu);
+            return;
 
-        case"3":
-        console.log(chalk.green("Edit profile selected"));
-        break;
+        case "2":
+            user.viewMyProfile(showMenu);
+            return;
 
-        case"4":
-        console.log(chalk.green("view other profile selected"));
-        break;
+        case "3":
+            profile.editProfile(rl, showMenu)
+            return;
 
-        case"5":
-        console.log(chalk.green("Send connection request"));
-        break;
+        case "4":
+            user.viewOtherFile(showMenu);
+            return;
 
-        case"6":
-        console.log(chalk.green("view request"));
-        break;
+        case "5":
+            console.log(chalk.green("Send connection request"));
+            break;
 
-        case"7":
-        console.log(chalk.yellow("Accept / Reject request "));
-        break;
+        case "6":
+            console.log(chalk.green("view request"));
+            break;
 
-        case"8":
-        console.log(chalk.green("view connections"));
-        break;
+        case "7":
+            console.log(chalk.yellow("Accept / Reject request"));
+            break;
 
-        case"9":
-        console.log(chalk.green("create post "));
-        break;
+        case "8":
+            console.log(chalk.green("view connections"));
+            break;
 
-        case"10":
-        console.log(chalk.green("view feed"));
-        break;
+        case "9":
+            console.log(chalk.green("create post"));
+            break;
 
-        case"11":
-        console.log(chalk.green("like/comment"));
-        break;
+        case "10":
+            console.log(chalk.green("view feed"));
+            break;
 
-        case"12":
-        console.log(chalk.red("Exit"));
-        rl.close();
-        return;
+        case "11":
+            console.log(chalk.green("like/comment"));
+            break;
+
+        case "12":
+            console.log(chalk.red("Exit"));
+            rl.close();
+            return;
 
         default:
             console.log(chalk.yellow("invalid choice"));
-            
-        
-        
-        
     }
+
     showMenu();
 }
 showMenu();

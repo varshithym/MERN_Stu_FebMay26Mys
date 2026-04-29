@@ -5,6 +5,7 @@ import { PropDestructuring } from './components/p2'
 import Container from './components/P3'
 import { PropsChildren } from './components/P3'
 import { PropDrillingDemo } from './components/p4'
+import { SharedAtateParent } from './components/p5'
 
 function App() {
   
@@ -13,9 +14,10 @@ function App() {
     <>
       {/* <PropBasics/>
       <PropDestructuring/> */}
-      <Container/>
+      {/* <Container/>
       <PropsChildren/>
-      <PropDrillingDemo/>
+      <PropDrillingDemo/> */}
+      <SharedAtateParent/>
     </>
   )
 }

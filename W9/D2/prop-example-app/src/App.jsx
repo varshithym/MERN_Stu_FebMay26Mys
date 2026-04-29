@@ -1,23 +1,26 @@
+import { useState } from 'react'
+// import {PropBasics} from './components/P1'
+// import{PropDestructuring} from './components/P2'
+// import{PropsChildren} from './components/P3'
+// import{PropDrillingDemo} from './components/P4'
+// import{SharedStateParent} from './components/P5'
+// import{CompositionDemo} from './components/P6'
+import{ObjectsAndArrayProps} from './components/P7'
+
 
 import './App.css'
-import { PropBasics } from './components/P1'
-import { PropDestructuring } from './components/p2'
-import Container from './components/P3'
-import { PropsChildren } from './components/P3'
-import { PropDrillingDemo } from './components/p4'
-import { SharedAtateParent } from './components/p5'
 
 function App() {
   
-
   return (
     <>
-      {/* <PropBasics/>
-      <PropDestructuring/> */}
-      {/* <Container/>
-      <PropsChildren/>
-      <PropDrillingDemo/> */}
-      <SharedAtateParent/>
+    {/* <PropBasics/> */}
+    {/* <PropDestructuring/> */}
+    {/* <PropsChildren/> */}
+    {/* <PropDrillingDemo/> */}
+    {/* <SharedStateParent/> */}
+    {/* <CompositionDemo/> */}
+    <ObjectsAndArrayProps/>
     </>
   )
 }

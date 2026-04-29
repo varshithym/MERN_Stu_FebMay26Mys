@@ -6,7 +6,7 @@ import { useState } from 'react'
 // import{SharedStateParent} from './components/P5'
 // import{CompositionDemo} from './components/P6'
 import{ObjectsAndArrayProps} from './components/P7'
-
+import { PropsImmutability } from './components/P8'
 
 import './App.css'
 
@@ -20,7 +20,8 @@ function App() {
     {/* <PropDrillingDemo/> */}
     {/* <SharedStateParent/> */}
     {/* <CompositionDemo/> */}
-    <ObjectsAndArrayProps/>
+    {/* <ObjectsAndArrayProps/> */}
+    <PropsImmutability/>
     </>
   )
 }

@@ -58,4 +58,4 @@ movieSchema.virtual("isReleased").get(function(){
     return this.releaseDate<=new Date();
 });
 
-module.exports = mongoose.model("movie",movieSchema);
+module.exports = mongoose.model("Movie",movieSchema);

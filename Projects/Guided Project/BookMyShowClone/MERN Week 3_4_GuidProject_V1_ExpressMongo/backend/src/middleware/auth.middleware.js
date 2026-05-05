@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const user = require("../models/User");
+const User = require("../models/User");
 
 // Auth Middleware
 exports.protect = async(req,res,next)=>{
@@ -9,10 +9,10 @@ exports.protect = async(req,res,next)=>{
             req.headers.authorization && req.headers.authorization.startsWith("Bearer")
 
         ){
-            token = req.authorization.split(" ")[1];
+            token = req.headers.authorization.split(" ")[1];
         }
         if(!token){
-            return res.ststus(401).json({
+            return res.status(401).json({
                 success:false,
                 message:"not authorized token missing"
             })
@@ -23,7 +23,7 @@ exports.protect = async(req,res,next)=>{
         // Get user from DB
         const user = await User.findById(decoded.id);
         if(!user){
-            return res.ststus(404).json({
+            return res.status(404).json({
                 success:false,
                 message:"user not found"
             });
@@ -33,7 +33,7 @@ exports.protect = async(req,res,next)=>{
         next();
     }
     catch(error){
-         return res.ststus(401).json({
+         return res.status(401).json({
                 success:false,
                 message:"expired token"
             });

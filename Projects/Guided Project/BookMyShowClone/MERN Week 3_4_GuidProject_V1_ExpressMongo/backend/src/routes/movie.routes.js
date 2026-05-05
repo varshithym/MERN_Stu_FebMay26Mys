@@ -10,5 +10,5 @@ router.get("/",movieController.getMovies);
 // Admin only route
 router.post("/",protect,authorize("admin"),movieController.createMovie);
 router.put("/:id",protect,authorize("admin"),movieController.updateMovie);
-router.post("/:id",protect,authorize("admin"),movieController.deleteMovie);
+router.delete("/:id",protect,authorize("admin"),movieController.deleteMovie);
 module.exports = router;

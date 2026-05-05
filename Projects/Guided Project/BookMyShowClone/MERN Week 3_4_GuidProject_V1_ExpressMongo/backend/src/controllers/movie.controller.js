@@ -4,7 +4,7 @@ exports.createMovie = async (req,res,next ) =>{
     try{
         const movie = await movieServices.createMovie(req.body);
 
-        req.status(201).json({
+        res.status(201).json({
             success:true,
             message:"Movie created successfully",
             data:movie,
@@ -19,7 +19,7 @@ exports.getMovies = async (req,res,next ) =>{
     try{
         const result = await movieServices.getMovies(req.query);
 
-        req.status(200).json({
+        res.status(200).json({
             success:true,
             message:"Movie list fetched",
             data:result,
@@ -38,7 +38,7 @@ exports.updateMovie = async (req,res,next ) =>{
         );
 
 
-        req.status(200).json({
+        res.status(200).json({
             success:true,
             message:"Movie update successfully",
             data:movie,
@@ -57,7 +57,7 @@ exports.deleteMovie = async (req,res,next ) =>{
         );
 
 
-        req.status(200).json({
+        res.status(200).json({
             success:true,
             message:"Movie delete successfully",
             

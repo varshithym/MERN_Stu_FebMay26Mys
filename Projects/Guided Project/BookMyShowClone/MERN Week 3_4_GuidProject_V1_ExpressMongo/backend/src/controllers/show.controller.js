@@ -1,16 +1,4 @@
-None selected
 
-Skip to content
-Using Gmail with screen readers
-Enable desktop notifications for Gmail.
-   OK  No, thanks
-1 of 1,349
-(no subject)
-Inbox
-
-Thilak T M <thilakawm123@gmail.com>
-10:45 (0 minutes ago)
-to me
 
 const showService = require("../services/show.service");
 
@@ -21,7 +9,7 @@ exports.createShow = async (req,res,next) => {
 
         res.status(201).json({
             success:true,
-            message:"Shows created successfully",
+            message:"Show created successfully",
             data:show
         });
     }

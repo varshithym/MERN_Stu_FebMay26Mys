@@ -15,7 +15,7 @@
 // 3 Read value using useContex()
 import { useState } from "react";
 import { createContext,useContext } from "react"
-
+import { useDocumentTitle, CustomHooksIntro } from "./p2";
 // 1 create a context 
 const ThemeContext = createContext();
 // child Component 1
@@ -52,6 +52,8 @@ function Layout(){
         <div>
             <Header/>
             <Content/>
+            <useDocumentTitle/>
+            <CustomHooksIntro/>
         </div>
     )
 }

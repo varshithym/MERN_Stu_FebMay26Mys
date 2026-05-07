@@ -1,4 +1,4 @@
-//
+// Stop event propagation
 export function EventObj() {
     const handleParentClick=(event)=>{
         alert(` Parent clicked target: 

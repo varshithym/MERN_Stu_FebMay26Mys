@@ -6,6 +6,8 @@ import { EventObject } from './components/p2'
 import { PassingArguments } from './components/p3'
 import { UseCallBackEvents } from './components/p5'
 import { FormsPatterns } from './components/p7'
+import { KeyboardEvent } from './components/p8'
+import { EventObj } from './components/p9'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +18,9 @@ function App() {
     {/* <EventObject/> */}
     {/* <PassingArguments/> */}
     {/* <UseCallBackEvents/> */}
-    <FormsPatterns/>
+    {/* <FormsPatterns/> */}
+    {/* <KeyboardEvent/> */}
+    <EventObj/>
     </>
   )
 }
